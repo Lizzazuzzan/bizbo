@@ -1,0 +1,75 @@
+<app-navbar></app-navbar>
+
+<div class="bizbo-home-background">
+  <section class="home-page">
+    <div class="flex-total-center">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="row">
+              <div class="get-report-card card-box col-lg-12">
+                <div class="brand-logo-tag margin-bottom-30">
+                  <div class="brand-tagline">
+                    <h2>ABOUT BizBo™</h2>
+                  </div>
+                </div>
+                <div class="description-content margin-bottom-30">
+                  <p>BizBo™ is an intelligent system which helps businesses and entrepreneurs. 
+                      Its all about helping individuals analyze their ideas and businesses, build their goals, and achieve them, along with the  resources, data and service providers needed!<br/>
+                  </p>
+                </div>
+                <div style="cursor: pointer;" class="get-report-button">
+                  <a data-toggle="modal" data-target="#feedbackModal"  (click)="openModal()" class="">WE WANT TO HEAR FROM YOU</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <form name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
+  <div style="margin-top: 10%;" class="modal fade" id="feedbackModal" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4>Your feedback is important!</h4>
+        </div>
+        <div class="modal-body" style="min-height: 350px;">
+
+            <!-- <div style="margin-left: 40%;">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+            </div> -->
+
+            <p>Please type in your suggestions.</p>
+            
+            <div style="text-align: center;" class="form-group margin-bottom-30">
+                <textarea style="width: 100%; height: 100px;" name="feedback" [(ngModel)]="model.feedback" placeholder="Type your feedback here.."></textarea>
+
+                  <input type="email" name="email" class="form-control form-text bizbo-textfield" [(ngModel)]="model.email" data-toggle="tooltip" data-placement="top" title="Company Location" name="company-location" id="" placeholder="Email">
+                
+                  <div class="g-recaptcha" data-sitekey="6LekpFgUAAAAAHTYmmmMZerZQaIIxfOBdO0jq61X"></div>
+
+                <button type="submit" style="margin-top: 20px;"  class="button-normal">Submit</button>
+                <h6 id="enter-email-alert" style="color: red; text-align: center; display: none;">Please enter a valid email address.</h6>
+   
+        </div>
+      </div>
+    </div>
+  
+  </div>
+  </div>
+  </form>
+  
+

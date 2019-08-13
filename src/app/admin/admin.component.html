@@ -1,0 +1,74 @@
+<app-navbar></app-navbar>
+
+<div class="bizbo-home-background">
+  <header>
+      <nav id="bizboNavbar" class="bizbo-navbar navbar navbar-fixed-top navbar-default">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navMenu">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">
+              <img class="img-responsive logo d-inline-block align-top" alt="Brand" src="src/assets/images/bizbo_navbar_logo.png">
+            </a>
+          </div>
+          <div class="collapse navbar-collapse" id="navMenu">
+              <ul class="nav navbar-nav navbar-right">
+                  <li><a class="header-nav-links active" href="/home">HOME</a></li>
+                  <li><a class="header-nav-links" href="/about">ABOUT BIZBO</a></li>
+                  <li><a class="header-nav-links" href="/service-providers">SERVICE PROVIDERS</a></li>
+                  <!-- <li><a class="header-nav-links" href="/signin">SIGN IN</a></li> -->
+                </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    
+<section ng-controller="adminController as adminCtrl" class="signin-page">
+  <div class="flex-total-center">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-12 col-sm-12 col-xs-12">
+
+          <div class="row">
+            <div class="signin-card card-box col-lg-12">
+
+              <div class="heading margin-bottom-30">
+                <h2 class="card-heading">Admin Login</h2>
+              </div>
+              <div class="bizbo-signin-signup-form">
+                <form (submit)="onLoginSubmit()" class="bizbo-signin-details" action="#" method="post">
+
+                    <div class="form-group margin-bottom-30">
+                      <input type="text"  class="form-control form-text bizbo-textfield"  [(ngModel)]="username" name="username" placeholder="Username">
+                    </div>
+                    <div class="form-group margin-bottom-30">
+                      <input type="password" class="form-control form-text bizbo-textfield" [(ngModel)]="password"  name="password" placeholder="Password">
+                    </div>
+                    <div class="row">
+                      <div id="signup-link-top" class="signin-or-signup col-lg-7 col-md-7 col-sm-7 col-xs-12 no-padding flex-total-center">
+                      </div>
+                      <div class="signin-or-signup-button col-lg-5 col-md-5 col-sm-5 col-xs-12 no-padding flex-total-center">
+                        <a routerLink = "/report-request" class="button-normal" >SIGN IN</a>
+                      </div>
+                      <div id="signup-link-bottom" class="signin-or-signup col-lg-7 col-md-12 col-sm-12 col-xs-12 no-padding flex-total-center">
+                      </div>
+                    </div>
+
+                </form>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+</div>

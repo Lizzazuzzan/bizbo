@@ -1,0 +1,145 @@
+<app-navbar></app-navbar>
+
+<div class="bizbo-home-background">
+  <div class="flex-total-center">
+    <div class="container">
+      <div class="row">
+
+          <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="row">
+              <div class="business-info card-box col-lg-12">
+
+                <div class="heading margin-bottom-30">
+                  <h2 class="card-heading">Business Information</h2>
+                </div>
+                <div class="business-info-form">
+                  <form class="business-info-details" name="form"  #f="ngForm" novalidate>
+                
+
+                    <div class="row margin-bottom-10">
+                      <div class="form-left col-lg-5 col-md-5 col-sm-5 col-xs-12">
+
+                        <div class="form-group margin-bottom-30">
+                            <select class="form-control form-text bizbo-textfield" [(ngModel)]="model.businessLocation" data-toggle="tooltip" data-placement="top" title="Business Type" name="select-business-type" id="">
+                              <option class="dropdown-placeholder" [ngValue]="model.factor" disabled selected>Business Location</option>
+                              <option value="Carlsbad">Carlsbad, San Diego</option>
+                              <option value="Chula Vista">Chula Vista, San Diego</option>
+                              <option value="Coronado">Coronado, San Diego</option>
+                              <option value="Del Mar">Del Mar, San Diego</option>
+                              <option value="El Cajon">El Cajon, San Diego</option>
+                              <option value="Encinitas">Encinitas, San Diego</option>
+                              <option value="Imperial Beach">Imperial Beach, San Diego</option>
+                              <option value="Lemon Grove">Lemon Grove, San Diego</option>
+                              <option value="National City">National City, San Diego</option>
+                              <option value="Oceanside">Oceanside, San Diego</option>
+                              <option value="Poway">Poway, San Deigo</option>
+                              <option value="San Marcos">San Marcos, San Diego</option>
+                              <option value="Solana Beach">Solana Beach, San Diego</option>
+                              <option value="Vista">Vista, San Diego</option>
+                            </select>
+                          </div>
+
+                        <div class="form-group margin-bottom-30">
+                          <select class="form-control form-text bizbo-textfield" [(ngModel)]="model.businessType" data-toggle="tooltip" data-placement="top" title="Business Type" name="select-business-type" id="">
+                            <option class="dropdown-placeholder" [ngValue]="model.factor" disabled selected>Area of Business</option>
+                            <option value="gas-station">Gas stations</option>
+                            <option value="e-commerce">E-commerce (online)</option>
+                            <option value="beauty">Beauty services</option>
+                            <option value="realestate">Real estate</option>
+                            <option value="electronics">Electronics and appliance store</option>
+                            <option value="tourism">Tourism</option>
+                            <option value="restaurant">Restaurant</option>
+                            <option value="boutique">Fashion Boutique</option>
+                            <option value="events">Event Management</option>
+                            <option value="webdesign">Web Design/Development</option>
+                            <option value="catering">Catering </option>
+                            <option value="housecleaning">House Cleaning Services</option>
+                            <option value="bakery">Bakery</option>
+                            <option value="carwash">Car wash/Auto-detailing</option>
+                            
+                          </select>
+                        </div>
+                        <div class="form-group margin-bottom-30">
+                          <select class="form-control form-text bizbo-textfield" data-toggle="tooltip" [(ngModel)]="model.experience" data-placement="top" title="Niche of Business" name="niche-of-business" id="">
+                            <option class="dropdown-placeholder" [ngValue]="model.factor" disabled selected>Experience in the field</option>
+                            <option value="less than 1 year">Less Than 1 year</option>
+                            <option value="1-2 years">1 - 2 years</option>
+                            <option value="2-5 years">2 - 5 years</option>
+                            <option value="5-10 years">5 - 10 years</option>
+                            <option value="greater than 10 years">Greater than 10 years</option>
+                          </select>
+                        </div>
+                        <div class="form-group margin-bottom-30">
+                          <select class="form-control form-text bizbo-textfield"  data-toggle="tooltip" [(ngModel)]="model.businessEntityType" data-placement="top" title="Niche of Business" name="niche-of-business" id="">
+                            <option class="dropdown-placeholder" [ngValue]="model.factor" disabled selected >Business Entity Type</option>
+                            <option value="Corporation">Corporation</option>
+                            <option value="LLC">Limited Liability Company</option>
+                            <option value="Partnership">Limited Partnership</option>
+                            <option value="Sole Proprietorship">Sole Proprietorship</option>
+                          </select>
+                        
+                        </div>
+
+                      </div>
+
+                      <div class="form-center col-lg-2 col-md-2 col-sm-2"><div class="form-division"></div></div>
+
+                      <div class="form-right col-lg-5 col-md-5 col-sm-5 col-xs-12">
+
+                        <div class="form-group margin-bottom-30">
+                          <input type="text" class="form-control form-text bizbo-textfield" [(ngModel)]="model.budget" data-toggle="tooltip" data-placement="top" title="Starting Budget" name="starting-budget" id="" placeholder="Capital in hand">
+                        </div>
+
+                        <div class="form-group margin-bottom-30">
+                          <div class="radio-main-label">
+                            <label class="form-text form-text-default">Do you have partner or a team?</label>
+                          </div>
+                          <div class="radio-button-label">
+                            <label class="radio-text radio-inline"><input [(ngModel)]="model.havePartners" value="Yes" type="radio" name="have-partners">Yes</label>
+                            <label class="radio-text radio-inline"><input [(ngModel)]="model.havePartners" value="No" type="radio" name="have-partners">No</label>
+                          </div>
+                        </div>
+
+                        <div class="form-group margin-bottom-30">
+                          <div class="radio-main-label">
+                            <label class="form-text form-text-default">Is Your business Registered?</label>
+                          </div>
+                          <div class="radio-button-label">
+                            <label class="radio-text radio-inline"><input [(ngModel)]="model.bizRegistered" value="Yes" type="radio" name="company-registered">Yes</label>
+                            <label class="radio-text radio-inline"><input [(ngModel)]="model.bizRegistered" value="No" type="radio" name="company-registered">No</label>
+                          </div>
+                        </div>
+                        <div class="form-group margin-bottom-30">
+                          <div class="radio-main-label">
+                            <label class="form-text form-text-default">Looking for funding?</label>
+                          </div>
+                          <div class="radio-button-label">
+                            <label class="radio-text radio-inline"><input [(ngModel)]="model.lookingInvestors" value="Yes" type="radio" name="need-investors">Yes</label>
+                            <label class="radio-text radio-inline"><input [(ngModel)]="model.lookingInvestors" value="No" type="radio" name="need-investors">No</label>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+
+                      <div class="row business-info-footer-button-row">
+                        <div class="report-email-field col-lg-8 col-md-8 col-sm-8 col-xs-12">
+                          <input type="email" class="form-control form-text form-special bizbo-textfield" data-toggle="tooltip" [(ngModel)]="model.email" data-placement="top" title="E-mail Address" name="report-receive-email" id="" placeholder="Your E-mail Address">
+                        </div>
+                        <div class="submit-business-info col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                          <button type="button"  (click)="onSubmit()" routerLink="/report-thankyou" class="button-normal">GET MY REPORT</button>
+                        </div>
+                      </div>
+                     
+                  </form>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+      </div>
+    </div>
+  </div>
+
+</div>

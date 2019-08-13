@@ -1,0 +1,95 @@
+<app-navbar></app-navbar>
+
+<div class="bizbo-service-providers-background">
+
+
+  <section ng-controller="serviceProvidersController as serviceProvCtrl" class="service-providers-page">
+
+    <div class="flex-top-center">
+
+      <div class="container">
+        <div class="row">
+
+            <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12 ">
+
+              <div class="service-providers-list-menu">
+
+                <div class="panel-group">
+                  <div class="panel panel-default">
+                    <div data-toggle="collapse" href="#serviceProvidersCollapse" class="panel-heading">
+                      <h4 class="panel-title">
+                        <a class="collapse-list-heading">Service Providers</a>
+                      </h4>
+                    </div>
+                    <div id="serviceProvidersCollapse" class="panel-collapse ">
+                      <ul class="list-group">
+                        <li  (click)="isFunction('patent-lawyer')" class="list-group-item service-providers-collapse-list"><a class="service-provider-category-name">Patent Lawyer</a></li>
+                        <li  (click)="isFunction('lawyer')" class="list-group-item service-providers-collapse-list"><a class="service-provider-category-name" >Lawyer</a></li>
+                        <li  (click)="isFunction('marketing-coach')" class="list-group-item service-providers-collapse-list"><a class="service-provider-category-name" >Marketing Coach</a></li>
+                        <li (click)="isFunction('online-marketing-coach')" class="list-group-item service-providers-collapse-list"><a class="service-provider-category-name" >Online Marketing Coach</a></li>
+                        <li (click)="isFunction('website-developer')" class="list-group-item service-providers-collapse-list"><a class="service-provider-category-name" >Website Developer</a></li>
+                        <li (click)="isFunction('software-engineer')" class="list-group-item service-providers-collapse-list"><a class="service-provider-category-name" >Software Engineer</a></li>
+                        <li (click)="isFunction('general-business-coach')" class="list-group-item service-providers-collapse-list"><a class="service-provider-category-name" >General Business Coach</a></li>
+                        <li (click)="isFunction('management-coach')" class="list-group-item service-providers-collapse-list"><a class="service-provider-category-name" >Management Coach</a></li>
+                        <li (click)="isFunction('business-startup-coach')" class="list-group-item service-providers-collapse-list"><a class="service-provider-category-name" >Business Startup Coach</a></li>
+                        <li (click)="isFunction('investor')" class="list-group-item service-providers-collapse-list"><a class="service-provider-category-name" >Investors</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+
+            <div class=" col-lg-9 col-md-12 col-sm-12 col-xs-12 ">
+              <div class=" card-box service-providers-display-card">
+
+                <div class="service-providers-display">
+
+                   <div style="height: 300px; width: 100%;" class="provider-image">
+                    <img style="height: 300px; width: 100%;" src={{this.image}}>
+                   </div>
+                  <br>
+
+                   <div style="height: 110px;" class="provider-description">
+                      <p>{{this.content}}</p>
+                   </div>
+
+                </div>
+
+              </div>
+            </div>
+
+        </div>
+      </div>
+
+    </div>
+    
+  <div style="margin-top: 10%;" class="modal fade" id="enquiryModal" role="dialog">
+      <div class="modal-dialog">
+  
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4>This service provider will get in touch with you soon!</h4>
+          </div>
+          <div class="modal-body" style="min-height: 200px;">
+  
+              <div class="form-group margin-bottom-30">
+  
+                <input type="email" class="form-control form-text bizbo-textfield" ng-model="serviceProvCtrl.customerEmail" data-toggle="tooltip" data-placement="top" title="Company Location" name="company-location" id="" placeholder="Email">
+  
+                <button style="margin-top: 20px; margin-left: 40%;" ng-click="serviceProvCtrl.enquireProvider()" class="button-normal">Connect</button>
+                </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+
+
+</div>

@@ -1,0 +1,152 @@
+<div ng-controller="adminController as adminCtrl" class="bizbo-home-background1">
+
+  <div class="container">
+    <div class="row">
+
+      <a href="/home">
+        < Back Home</a> <div class="col-md-12 col-sm-12 col-xs-12">
+          <div class="row">
+            <div class="business-info card-box col-lg-12">
+
+              <div class="heading margin-bottom-30">
+                <h2 class="card-heading">Business Information</h2>
+              </div>
+              <div class="business-info-form">
+               <form action="/send-email" method="post" class="business-info-details" name="form" (ngSubmit)="f.form.valid && onSubmit(user)" #f="ngForm" novalidate>
+                  <div class="row margin-bottom-10">
+                    <div class="form-left col-lg-5 col-md-5 col-sm-5 col-xs-12">
+
+                      <div class="form-group margin-bottom-30">
+                        <input type="number" class="form-control form-text bizbo-textfield" [(ngModel)]="model.relevance"
+                          data-toggle="tooltip" data-placement="top" title="Company Location" name="company-location"
+                          id="" placeholder="Business Relevance">
+                      </div>
+                      <div class="form-group margin-bottom-30">
+                        <input type="number" class="form-control form-text bizbo-textfield"[(ngModel)]="model.team"
+                          data-toggle="tooltip" data-placement="top" title="Company Location" name="company-location"
+                          id="" placeholder="Team strength">
+                      </div>
+                      <div class="form-group margin-bottom-30">
+                        <input type="number" class="form-control form-text bizbo-textfield" [(ngModel)]="model.capital"
+                          data-toggle="tooltip" data-placement="top" title="Company Location" name="company-location"
+                          id="" placeholder="Capital">
+                      </div>
+
+                    </div>
+                    
+
+                    <div class="form-center col-lg-2 col-md-2 col-sm-2">
+                      <div class="form-division-admin1"></div>
+                    </div>
+
+                    <div class="form-right col-lg-5 col-md-5 col-sm-5 col-xs-12">
+
+                      <div class="form-group margin-bottom-30">
+                        <input type="number" class="form-control form-text bizbo-textfield" [(ngModel)]="model.expertise"
+                          data-toggle="tooltip" data-placement="top" title="Company Location" name="company-location"
+                          id="" placeholder="Business Domain Knowledge">
+                      </div>
+                      <div class="form-group margin-bottom-30">
+                        <input type="number" class="form-control form-text bizbo-textfield" [(ngModel)]="model.investment"
+                          data-toggle="tooltip" data-placement="top" title="Company Location" name="company-location"
+                          id="" placeholder="Investment">
+                      </div>
+                      <div class="form-group margin-bottom-30">
+                        <input type="number" class="form-control form-text bizbo-textfield" [(ngModel)]="model.competition"
+                          data-toggle="tooltip" data-placement="top" title="Company Location" name="company-location"
+                          id="" placeholder="Competition">
+                      </div>
+
+                    </div>
+                    </div>
+
+                </form>
+              </div>
+
+
+              <div class="heading margin-bottom-30">
+                <h2 class="card-heading">Market Trends</h2>
+              </div>
+              <div class="business-info-form">
+                  <form action="/send-email" method="post" class="business-info-details" name="form"  #f="ngForm" novalidate>
+
+                  <div class="row margin-bottom-10">
+                    <div class="form-left col-lg-5 col-md-5 col-sm-5 col-xs-12">
+
+                      <div class="form-group margin-bottom-30">
+                        <input type="number" class="form-control form-text bizbo-textfield" [(ngModel)]="model.marketvalue1"
+                          data-toggle="tooltip" data-placement="top" title="Company Location" name="company-location"
+                          id="" placeholder="Market Value1">
+                      </div>
+                      <div class="form-group margin-bottom-30">
+                        <input type="number" class="form-control form-text bizbo-textfield" [(ngModel)]="model.marketvalue3"
+                          data-toggle="tooltip" data-placement="top" title="Company Location" name="company-location"
+                          id="" placeholder="Market Value3">
+                      </div>
+                      <div class="form-group margin-bottom-30">
+                        <input type="number" class="form-control form-text bizbo-textfield" [(ngModel)]="model.marketvalue5"
+                          data-toggle="tooltip" data-placement="top" title="Company Location" name="company-location"
+                          id="" placeholder="Market Value5">
+                      </div>
+
+                    </div>
+                    
+
+                    <div class="form-center col-lg-2 col-md-2 col-sm-2">
+                      <div class="form-division-admin2"></div>
+                    </div>
+
+                    <div class="form-right col-lg-5 col-md-5 col-sm-5 col-xs-12">
+
+                      <div class="form-group margin-bottom-30">
+                        <input type="number" class="form-control form-text bizbo-textfield" [(ngModel)]="model.marketvalue2"
+                          data-toggle="tooltip" data-placement="top" title="Company Location" name="company-location"
+                          id="" placeholder="Market Value2">
+                      </div>
+                      <div class="form-group margin-bottom-30">
+                        <input type="number" class="form-control form-text bizbo-textfield" [(ngModel)]="model.marketvalue4"
+                          data-toggle="tooltip" data-placement="top" title="Company Location" name="company-location"
+                          id="" placeholder="Market Value4">
+                      </div>
+                      <div class="form-group margin-bottom-30">
+                        <input type="text" class="form-control form-text bizbo-textfield" [(ngModel)]="model.yaxislabel"
+                          data-toggle="tooltip" data-placement="top" title="Company Location" name="company-location"
+                          id="" placeholder="Y Axis Label">
+                      </div>
+
+                    </div>
+                    </div>
+
+                </form>
+              </div>
+
+
+              <div class="form-group margin-bottom-30">
+                <input type="text" class="form-control form-text bizbo-textfield" [(ngModel)]="model.comments"
+                  data-toggle="tooltip" data-placement="top" title="Company Location" name="company-location" id=""
+                  placeholder="Comments">
+              </div>
+
+
+              <div class="form-group margin-bottom-30">
+                <input type="text" class="form-control form-text bizbo-textfield" [(ngModel)]="model.recommendations"
+                  data-toggle="tooltip" data-placement="top" title="Company Location" name="company-location" id=""
+                  placeholder="Recommendations">
+              </div>
+
+            </div>
+
+            <div class="row business-info-footer-button-row">
+              <button type="button" (click)="onSubmit()"  class="button-normal">VIEW REPORT</button>
+              <button type="button" (click)="onSubmit()"  class="button-normal">GENERATE REPORT</button>
+            </div>
+
+            <br /> <br />
+
+          </div>
+    </div>
+  </div>
+
+</div>
+</div>
+
